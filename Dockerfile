@@ -1,10 +1,10 @@
 FROM python:3.9-slim
 
 # Establecer el directorio de trabajo dentro del contenedor
-WORKDIR /usr/src/app
+WORKDIR /app
 
 # Copiar el archivo de dependencias
-COPY requirements.txt ./
+COPY requirements.txt requirements.txt
 
 # Instalar dependencias
 RUN pip install --no-cache-dir -r requirements.txt
