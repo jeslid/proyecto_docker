@@ -1,5 +1,6 @@
 from flask import Flask
 
+
 # Crear una instancia de la aplicación flask siendo el app.py el punto de entrada del programa
 app = Flask(__name__)
 
