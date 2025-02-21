@@ -17,3 +17,20 @@ services:
       - "5000:5000"
     depends_on:
       - redis
+      - db
+
+  db:
+    image: postgres:latest
+    container_name: my-data_base
+    restart: always
+    environment:
+      - POSTGRES_USER=jesus
+      - POSTGRES_PASSWORD=554316
+      - POSTGRES_DB=my-data_base
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
